@@ -1,0 +1,10 @@
+{
+  // https://v3.nuxtjs.org/concepts/typescript
+  "compilerOptions": {
+    "types": [
+      "node",
+      "vue-devui/global"
+    ]
+  },
+  "extends": "./.nuxt/tsconfig.json"
+}
