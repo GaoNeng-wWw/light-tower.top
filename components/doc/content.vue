@@ -1,6 +1,6 @@
 <template>
-    <d-row type="flex" class="docs-devui-row">
-        <d-col flex="250px" :xs="0" :sm="0" :md="1" class="side">
+    <d-row type="flex" class="docs-devui-row" :gutter="24">
+        <d-col flex="220px" :xs="0" :sm="0" :md="1" class="side">
             <Side></Side>
         </d-col>
         <d-col flex="auto">

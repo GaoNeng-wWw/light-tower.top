@@ -76,13 +76,14 @@
         }
     }
     a{
-        position: relative;
         color: hsl(226, 90%, 60%);
         transition: all 300ms ease-in-out;
+        word-break: break-all;
     }
     a:hover{
         color: hsl(226, 90%, 50%);
         text-decoration: underline;
         text-underline-offset: 3px;
     }
+    
 }

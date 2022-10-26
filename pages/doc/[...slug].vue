@@ -51,7 +51,7 @@ const bannerImage = ref(useImage((page.value?.bg as string) ?? ''));
 }
 
 .content__doc {
-    padding: 0 1.5em;
+    // padding: 0 1.5em;
     box-sizing: border-box;
 }
 </style>
