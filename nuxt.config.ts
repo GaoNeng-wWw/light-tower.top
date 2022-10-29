@@ -2,13 +2,11 @@ import { defineNuxtConfig } from 'nuxt';
 import usePreRenderRoute from './hooks/usePreRenderRoute';
 import viteCompression from 'vite-plugin-compression';
 import viteImagemin from 'vite-plugin-imagemin';
-import uglifyjs from 'uglifyjs-webpack-plugin';
+import cssnano from 'cssnano';
 
 // https://v3.nuxtjs.org/api/configuration/nuxt.config
 export default defineNuxtConfig({
-  modules: ['@nuxt/content', '@nuxtjs/style-resources'],
-  css: ['~/assets/styles/common.scss'],
-  target: 'static',
+  modules: ['@nuxt/content','@nuxtjs/style-resources'],
   app:{
     head:{
       title: '灯塔 - 公益性质的反霸凌团体',
@@ -27,7 +25,7 @@ export default defineNuxtConfig({
         children: `var _hmt = _hmt || [];
         (function() {
           var hm = document.createElement("script");
-          hm.src = "https://hm.baidu.com/hm.js?76fd5e9d59f8c3f837eb1b89d08cb198";
+          hm.src = "//hm.baidu.com/hm.js?76fd5e9d59f8c3f837eb1b89d08cb198";
           var s = document.getElementsByTagName("script")[0]; 
           s.parentNode.insertBefore(hm, s);
         })();`
@@ -36,7 +34,6 @@ export default defineNuxtConfig({
   },
   nitro:{
     prerender:{
-      crawlLinks: true,
       routes: [...usePreRenderRoute()]
     }
   },
@@ -53,8 +50,18 @@ export default defineNuxtConfig({
         }
     },
   },
+  css: ['vue-devui/style.css', '@devui-design/icons/icomoon/devui-icon.css', '~/assets/styles/common.scss'],
+  build:{
+    extractCSS: true,
+  },
+  postcss: {
+    config: true,
+    plugins:{
+      'cssnano': true
+    }
+  },
   vite:{
-    plugins:[viteCompression(), viteImagemin({
+    plugins: [viteCompression(), viteImagemin({
       gifsicle: {
         optimizationLevel: 7,
         interlaced: true,
@@ -83,5 +90,34 @@ export default defineNuxtConfig({
         ],
       },
     })],
+    build:{
+      cssCodeSplit: true,
+      terserOptions:{
+        compress:{
+          drop_console: true,
+          drop_debugger: true,
+        }
+      },
+      rollupOptions: {
+        output: {
+          assetFileNames: assetInfo => {
+            var info = assetInfo.name.split('.')
+            var extType = info[info.length - 1]
+            if (
+              /\.(mp4|webm|ogg|mp3|wav|flac|aac)(\?.*)?$/i.test(assetInfo.name)
+            ) {
+              extType = 'media'
+            } else if (/\.(png|jpe?g|gif|svg)(\?.*)?$/.test(assetInfo.name)) {
+              extType = 'img'
+            } else if (/\.(woff2?|eot|ttf|otf)(\?.*)?$/i.test(assetInfo.name)) {
+              extType = 'fonts'
+            }
+            return `_nuxt/static/${extType}/[name]-[hash][extname]`
+          },
+          chunkFileNames: '_nuxt/static/js/[name]-[hash].js',
+          entryFileNames: '_nuxt/static/js/[name]-[hash].js'
+        }
+      }
+    },
   }
 })
