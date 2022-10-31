@@ -2,11 +2,13 @@ import { defineNuxtConfig } from 'nuxt';
 import usePreRenderRoute from './hooks/usePreRenderRoute';
 import viteCompression from 'vite-plugin-compression';
 import viteImagemin from 'vite-plugin-imagemin';
-import cssnano from 'cssnano';
 
 // https://v3.nuxtjs.org/api/configuration/nuxt.config
 export default defineNuxtConfig({
-  modules: ['@nuxt/content','@nuxtjs/style-resources'],
+  modules: ['@nuxt/content','@nuxtjs/style-resources', '~/modules/sitemap'],
+  sitemap:{
+    hostname: 'httsp://www.light-towet.top',
+  },
   app:{
     head:{
       title: '灯塔 - 公益性质的反霸凌团体',
@@ -16,6 +18,9 @@ export default defineNuxtConfig({
       },{
         name: 'description',
         content: '灯塔是一个公益性质的反霸凌团体，包括但不仅限于校园霸凌'
+      },{
+        name: 'baidu-site-verification',
+        content: 'code-RrPsrz5pN1'
       }],
       htmlAttrs:{
         lang: 'zh-cn'
