@@ -27,6 +27,6 @@ User-agent: Gigabot
 Disallow: 
 User-agent: Mediapartners-Google
 Disallow: 
-Crawl-delay: 120
+Crawl-delay: 5
 User-agent: *
 Disallow:
