@@ -14,7 +14,7 @@ author:
 
 ## 我是一名学生我也可以加入吗？
 
-灯塔项目不会有年龄限制，上到70下到7天理论上都可以加入。由于您还是在校学生，可以参与在学校中以灯塔的名义来创建一个校园反霸凌社团。具体的媒体素材[点击这里下载](https://pan.baidu.com/s/1h7W5guaZ9VFqOhEVqhmGGg?pwd=5kd8)，不过在使用之前您需要直到一些[使用规则](about/media-use-rules)
+灯塔项目不会有年龄限制，由于您还是在校学生，可以参与在学校中以灯塔的名义来创建一个校园反霸凌社团。具体的媒体素材[点击这里下载](https://pan.baidu.com/s/1h7W5guaZ9VFqOhEVqhmGGg?pwd=5kd8)，不过在使用之前您需要直到一些[使用规则](about/media-use-rules)
 
 ## 我是一名上班族我要如何贡献我的力量？
 

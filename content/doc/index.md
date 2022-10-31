@@ -1,5 +1,7 @@
 ---
 title: 什么是霸凌
+author:
+    - GaoNeng <gaonenggg@outlook.com>
 ---
 # 什么是霸凌
 
