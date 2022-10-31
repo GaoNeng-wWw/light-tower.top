@@ -7,7 +7,7 @@ import viteImagemin from 'vite-plugin-imagemin';
 export default defineNuxtConfig({
   modules: ['@nuxt/content','@nuxtjs/style-resources', '~/modules/sitemap'],
   sitemap:{
-    hostname: 'httsp://www.light-towet.top',
+    hostname: 'https://www.light-tower.top',
   },
   app:{
     head:{
