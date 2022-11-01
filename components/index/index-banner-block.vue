@@ -32,18 +32,18 @@ h3{
 .actions{
     margin: 1em 0;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     gap: 16px;
 }
 h3,.description{
-    text-align: center;
+    text-align: left;
 }
-@media screen and (min-width:871px){
+@media screen and (max-width:853px){
     h3,.description{
-        text-align: left;
+        text-align: center;
     }
     .actions{
-        justify-content: flex-start;
+        justify-content: center;
     }
 }
 
