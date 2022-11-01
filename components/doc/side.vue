@@ -58,6 +58,10 @@
 </template>
 
 <style lang="scss" scoped>
+.menu__menu-wrapper__sub-menu__menu-item-list__menu-item:hover:not(.active),
+.menu__menu-wrapper__menu-item:hover:not(.active){
+    color: #2e5efd;
+}
 .menu{
     width: 100%;
     &__menu-wrapper{
@@ -97,8 +101,8 @@
 .active{
     position:relative;
     background: #f2f5fc;
-    span{
-        color:black;
+    span, i{
+        color: #2e5efd;
     }
 }
 .active::before{

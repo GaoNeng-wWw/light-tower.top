@@ -42,14 +42,22 @@ div{
                 margin-left: 1em;
                 font-size: 12pt;
                 position: relative;
+                transition: all 300ms ease-in-out;
             }
-            li.active::before{
+            li::before{
                 content: "";
                 background: hsl(224deg, 52%, 54%);
                 position: absolute;
                 width: 100%;
                 height: 3px;
                 bottom: 0px;
+                transform: scaleX(0);
+            }
+            li.active::before{
+                transform: scaleX(1);
+            }
+            li:hover::before{
+                transform: scaleX(1);
             }
         }
     }

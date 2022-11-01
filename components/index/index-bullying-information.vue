@@ -3,7 +3,14 @@
         <d-content>
             <div class="section">
                 <div class="section__2">
-                    <d-row type="flex" wrap class="docs-devui-row" align="top" justify="center" :gutter="10">
+                    <d-row 
+                        wrap
+                        type="flex"
+                        class="docs-devui-row"
+                        :align="'middle'"
+                        justify="center"
+                        :gutter="24"
+                    >
                         <d-col flex="0 0 300px">
                             <img src="@/assets/images/Bullying-(1).gif" alt="" style="width: 100%;">
                         </d-col>
@@ -34,7 +41,13 @@
                 </div>
                 <hr>
                 <div class="section__3">
-                    <d-row wrap type="flex" class="docs-devui-row" align="top" justify="center" :gutter="10">
+                    <d-row 
+                        wrap 
+                        type="flex"
+                        class="docs-devui-row"
+                        :align="'middle'"
+                        justify="center"
+                        :gutter="24">
                         <d-col flex="0 0 300px">
                             <img src="@/assets/images/Discussion-bro.png" alt="" style="width: 100%;">
                         </d-col>
@@ -60,13 +73,21 @@
 
 </template>
 
-<style lang="scss">
-.docs-devui-row {
-    margin: 4em 2em;
+<style lang="scss" scoped>
+a {
+    color: #2f4fba;
 }
 
-.section__content {
-    text-indent: 16px;
+a:hover {
+    color: #2e5efd;
+}
+
+.docs-devui-row {
+    margin: 2em;
+}
+
+.section__content:not(:last-child) {
+    margin-bottom: .5em;
 }
 
 .section__2,
@@ -77,7 +98,8 @@
     margin-top: 1em;
     padding: 1em;
 }
-.section__3{
+
+.section__3 {
     margin-bottom: 2em;
 }
 </style>
