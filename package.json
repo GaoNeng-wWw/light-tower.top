@@ -3,7 +3,7 @@
   "scripts": {
     "build": "nuxt build",
     "dev": "nuxt cleanup && nuxt dev",
-    "generate": "pnpx nuxi cleanup && pnpx nuxi generate",
+    "generate": "nuxt cleanup && nuxt generate",
     "preview": "nuxt preview",
     "clean": "nuxt cleanup",
     "analyze": "nuxt analyze",
