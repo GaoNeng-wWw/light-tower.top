@@ -12,7 +12,7 @@
                 <h2>本文贡献者</h2>
                 <ul>
                     <li v-for="author in authors">
-                        <a :href="author.email">{{author.name}}</a>
+                        <a :href="'mailto:' + author.email">{{author.name}}</a>
                     </li>
                 </ul>
             </d-content>
@@ -31,7 +31,7 @@ const authors = computed(()=>{
     return rawAuthors.value?.map((author) => {
         const splitArray = author.trim().split(' ');
         const authorName = splitArray[0].trim();
-        const authorEmail = splitArray[0].slice(1,-1);
+        const authorEmail = splitArray[1].slice(1,-1);
         return {
             name: authorName,
             email: authorEmail
