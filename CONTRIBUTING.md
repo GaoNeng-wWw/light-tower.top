@@ -48,6 +48,12 @@ pnpm dev
 > 
 > 可以执行 pnpm i --ignore-scripts，或者参考：https://github.com/kohler/gifsicle/issues/177 进行解决。
 
+> 如果遇到执行 pnpm dev 报以下错误：
+> 
+> ERROR  The following dependencies are imported but could not be resolved: vue
+> 
+> 可以执行 pnpm i --shamefully-hoist 进行解决
+
 ## 参与贡献
 
 灯塔项目是一个多人合作的公益性质的网站，为了避免多人同时编写一个文档或功能，请在isses中声明自己的任务。
