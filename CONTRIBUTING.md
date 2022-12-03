@@ -41,6 +41,13 @@ pnpm i
 pnpm dev
 ```
 
+> 如果遇到执行 pnpm i 安装依赖失败，报以下错误：
+> 
+> ✖ Error: Command failed: /bin/sh -c autoreconf -ivf
+> /bin/sh: autoreconf: command not found
+> 
+> 可以执行 pnpm i --ignore-scripts，或者参考：https://github.com/kohler/gifsicle/issues/177 进行解决。
+
 ## 参与贡献
 
 灯塔项目是一个多人合作的公益性质的网站，为了避免多人同时编写一个文档或功能，请在isses中声明自己的任务。
