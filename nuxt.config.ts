@@ -1,11 +1,11 @@
-import { defineNuxtConfig } from 'nuxt';
+// import { defineNuxtConfig } from 'nuxt';
 import usePreRenderRoute from './hooks/usePreRenderRoute';
 import viteCompression from 'vite-plugin-compression';
 import viteImagemin from 'vite-plugin-imagemin';
 
 // https://v3.nuxtjs.org/api/configuration/nuxt.config
 export default defineNuxtConfig({
-  modules: ['@nuxt/content','@nuxtjs/style-resources', '~/modules/sitemap'],
+  modules: ['@nuxt/content', '~/modules/sitemap'],
   sitemap:{
     hostname: 'https://www.light-tower.top',
   },
@@ -56,9 +56,6 @@ export default defineNuxtConfig({
     },
   },
   css: ['vue-devui/style.css', '@devui-design/icons/icomoon/devui-icon.css', '~/assets/styles/common.scss'],
-  build:{
-    extractCSS: true,
-  },
   postcss: {
     config: true,
     plugins:{
@@ -106,15 +103,15 @@ export default defineNuxtConfig({
       rollupOptions: {
         output: {
           assetFileNames: assetInfo => {
-            var info = assetInfo.name.split('.')
+            var info = assetInfo.name!.split('.')
             var extType = info[info.length - 1]
             if (
-              /\.(mp4|webm|ogg|mp3|wav|flac|aac)(\?.*)?$/i.test(assetInfo.name)
+              /\.(mp4|webm|ogg|mp3|wav|flac|aac)(\?.*)?$/i.test(assetInfo.name!)
             ) {
               extType = 'media'
-            } else if (/\.(png|jpe?g|gif|svg)(\?.*)?$/.test(assetInfo.name)) {
+            } else if (/\.(png|jpe?g|gif|svg)(\?.*)?$/.test(assetInfo.name!)) {
               extType = 'img'
-            } else if (/\.(woff2?|eot|ttf|otf)(\?.*)?$/i.test(assetInfo.name)) {
+            } else if (/\.(woff2?|eot|ttf|otf)(\?.*)?$/i.test(assetInfo.name!)) {
               extType = 'fonts'
             }
             return `_nuxt/static/${extType}/[name]-[hash][extname]`
