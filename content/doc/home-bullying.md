@@ -56,7 +56,7 @@ bg: front-view-young-female-red-shirt-suffers-from-physical-threats-violence-cre
 
 [杜鲁斯家庭虐待干预项目](https://www.theduluthmodel.org/)所绘制的**力量和控制轮盘**可以帮助你更好的辨别你的朋友或你自己是否正在经历家庭暴力。
 
-![power-and-control-wheel-zh](/_nuxt/assets/images/power-and-control-wheel-zh.png)
+![power-and-control-wheel-zh](/img/power-and-control-wheel-zh.png)
 
 
 ## 危害
