@@ -80,6 +80,14 @@
         transition: all 300ms ease-in-out;
         word-break: break-all;
     }
+    img{
+        width: 50%;
+    }
+    ol{
+        li{
+            word-break: break-all;
+        }
+    }
     a:hover{
         color: hsl(226, 90%, 50%);
         text-decoration: underline;
