@@ -20,7 +20,7 @@ import Banner from '~/components/common/banner/index.vue'
 import Content from '~/components/doc/content.vue';
 import { useImage } from '@/hooks/useImage';
 import { ref } from 'vue';
-const {page} = useContent();
+const { page } = useContent();
 const currentTitle = ref(page.value?.title ?? '');
 const bannerImage = ref(useImage((page.value?.bg as string) ?? ''));
 </script>
