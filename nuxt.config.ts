@@ -53,7 +53,7 @@ export default defineNuxtConfig({
         ws: {
             hostname: 'localhost'
         }
-    },
+    }
   },
   css: ['vue-devui/style.css', '@devui-design/icons/icomoon/devui-icon.css', '~/assets/styles/common.scss'],
   postcss: {
