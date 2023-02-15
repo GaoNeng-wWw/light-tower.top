@@ -2,7 +2,7 @@
 title: 家庭霸凌
 author:
     - GaoNeng <gaonenggg@outlook.com>
-bg: front-view-young-female-red-shirt-suffers-from-physical-threats-violence-cream-space-female-cloth-photo-violence-domestic.jpg
+bg: family-bullying-bg.jpg
 ---
 
 # 家庭霸凌
