@@ -1,7 +1,7 @@
 {
   "private": true,
   "scripts": {
-    "build": "nuxt build",
+    "build": "nuxt cleanup && nuxt build",
     "dev": "nuxt cleanup && nuxt dev",
     "generate": "nuxt cleanup && nuxt generate",
     "preview": "nuxt preview",
