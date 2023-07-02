@@ -40,7 +40,8 @@ export default defineNuxtConfig({
   nitro:{
     prerender:{
       routes: [...usePreRenderRoute()]
-    }
+    },
+    preset: 'vercel'
   },
   plugins: [
     {
