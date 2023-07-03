@@ -1,16 +1,16 @@
 <template>
-  <d-layout>
-      <d-header style="background: #ff">
-          <Nav></Nav>
-      </d-header>
-      <d-content>
-          <NuxtLoadingIndicator />
-          <NuxtPage />
-      </d-content>
-      <d-footer>
-          <Footer></Footer>
-      </d-footer>
-  </d-layout>
+  <div class="container">
+    <div class="w-full bg-white">
+      <Nav></Nav>
+    </div>
+  </div>
+  <div class="w-full">
+    <NuxtLoadingIndicator />
+    <NuxtPage />
+  </div>
+  <div class="w-full">
+    <Footer />
+  </div>
 </template>
 
 <script lang="ts" setup>
