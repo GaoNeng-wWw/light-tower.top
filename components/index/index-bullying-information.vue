@@ -2,9 +2,9 @@
     <div>
         <div class="section">
             <div class="
-                flex flex-wrap items-center justify-center gap-6 m-8 bg-white 
+                flex flex-wrap items-center justify-center gap-6 bg-white 
                 border-gray-200 border-solid border
-                mt-8 rounded-lg p-8 w-full
+                mt-8 rounded-lg p-8 w-full box-border
             ">
                 <div class="flex-grow-0 flex-shrink-0 basis-[300px]">
                     <img src="@/assets/images/Bullying-(1).gif" alt="" style="width: 100%;">
@@ -35,9 +35,9 @@
             </div>
             <hr>
             <div class="
-                flex flex-wrap items-center justify-center gap-6 m-8 bg-white 
+                flex flex-wrap items-center justify-center gap-6 bg-white 
                 border-gray-200 border-solid border
-                mt-8 rounded-lg p-8 w-full
+                my-8 rounded-lg p-8 w-full
             ">
                 <div class="flex flex-shrink-0 flex-grow-0 basis-[300px]">
                     <img src="@/assets/images/Discussion-bro.png" alt="" style="width: 100%;">
