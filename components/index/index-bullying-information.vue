@@ -2,14 +2,14 @@
     <div>
         <div class="section">
             <div class="
-                flex flex-wrap items-center justify-center gap-6 bg-white 
+                flex items-center justify-center gap-6 bg-white 
                 border-gray-200 border-solid border
-                mt-8 rounded-lg p-8 w-full box-border
+                mt-8 rounded-lg p-8 w-full box-border max-sm:flex-col
             ">
-                <div class="flex-grow-0 flex-shrink-0 basis-[300px]">
-                    <img src="@/assets/images/Bullying-(1).gif" alt="" class="w-[300px] h-[300px]">
+                <div class="flex-grow-0 flex-shrink-0">
+                    <img src="@/assets/images/Bullying-(1).gif" alt="" class="max-h-[300px]">
                 </div>
-                <div class="flex-grow flex-shrink-0 basis-[400px] px-4">
+                <div class="flex-grow flex-shrink-1 basis-[400px]">
                     <span>
                         <h1 class="leading-none">什么是霸凌</h1>
                         <nuxt-link to="/doc" class="text-blue-600 hover:text-blue-700">了解更多</nuxt-link>
@@ -35,15 +35,17 @@
             </div>
             <hr>
             <div class="
-                flex flex-wrap items-center justify-center gap-6 bg-white 
+                flex items-center justify-center gap-6 bg-white 
                 border-gray-200 border-solid border
-                my-8 rounded-lg p-8 w-full
+                mt-8 rounded-lg p-8 w-full box-border max-sm:flex-col
             ">
-                <div class="flex flex-shrink-0 flex-grow-0 basis-[300px]">
-                    <img src="@/assets/images/Discussion-bro.png" alt="" class="w-[300px] h-[300px]">
+                <div class="flex-shrink-0 flex-grow-0">
+                    <img src="@/assets/images/Discussion-bro.png" alt="" class="max-h-[300px]">
                 </div>
-                <div class="flex flex-col flex-grow flex-shrink-0 basis-[300px]">
-                    <h1 class="leading-none mt-0">防治</h1>
+                <div class="flex-col flex-grow flex-shrink-1 basis-[400px]">
+                    <span>
+                        <h1 class="leading-none mt-0">防治</h1>
+                    </span>
                     <h3 class="mb-1 mt-0 ">
                         在防治欺凌方面，权威人士可扮演重要的角色，不管该权威人士是小孩子的父母或监护人、
                         学校的老师、或者职场上的人力资源部门员工或主管等等，都可在阻止欺凌方面做出贡献。
@@ -59,7 +61,6 @@
             </div>
         </div>
     </div>
-
 </template>
 
 <style lang="scss" scoped>

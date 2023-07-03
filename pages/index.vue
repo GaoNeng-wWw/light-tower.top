@@ -1,11 +1,11 @@
 <template>
     <div>
         <index-banner></index-banner>
-        <d-row :justify="'center'" >
-            <d-col :md="18" :lg="18">
+        <div class="w-full flex">
+            <div class="max-w-5xl mx-auto">
                 <bullying-information></bullying-information>
-            </d-col>
-        </d-row>
+            </div>
+        </div>
     </div>
 </template>
 

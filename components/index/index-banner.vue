@@ -1,28 +1,15 @@
 <template>
-    <d-row justify="center">
-        <d-col :xxl="18" :xl="18" :lg="18" :md="18" :sm="18" :xs="24">
-            <d-row justify="around" align="middle" class="wrap-reverse" type="flex">
-                <d-col flex="0 0 320px">
-                    <banner-block></banner-block>
-                </d-col>
-                <d-col flex="0 0 320px">
-                    <img class="logo" src="~/assets/images/Lighthouse-pana.png"/>
-                </d-col>
-            </d-row>
-        </d-col>
-    </d-row>
+    <div class="flex">
+        <div class="max-w-5xl mx-auto flex justify-center items-center flex-col-reverse text-center sm:flex-row">
+            <div class="flex-grow-0 flex-shrink-0 basis-auto sm:basis-[320px]">
+                <banner-block></banner-block>
+            </div>
+            <div class="flex-grow-0 flex-shrink-1">
+                <img class="min-w-0 max-h-[320px] sm:min-w-[320px]" src="~/assets/images/Lighthouse-pana.png"/>
+            </div>
+        </div>
+    </div>
 </template>
-<style lang="scss">
-.logo{
-    width: 320px;
-    height: 320px;
-    display: block;
-    margin: auto;
-}
-.wrap-reverse{
-    flex-wrap: wrap-reverse !important;
-}
-</style>
 <script lang="ts" setup>
 import bannerBlock from './index-banner-block.vue';
 </script>
