@@ -14,7 +14,6 @@
         </div>
         <div class="mask" v-if="props.useMask"></div>
     </div>
-<!--  -->
 </template>
 <script lang="ts" setup>
 type propsPosition = {

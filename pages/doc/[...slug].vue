@@ -5,12 +5,12 @@
                 <h1>{{ currentTitle }}</h1>
             </Banner>
         </div>
-        <div class="content">
-            <d-row justify="center">
-                <d-col :md="22" :lg="18">
+        <div class="w-full py-4 box-border">
+            <div class="w-full flex justify-center">
+                <div class="md:w-full lg:max-w-7xl">
                     <Content></Content>
-                </d-col>
-            </d-row>
+                </div>
+            </div>
         </div>
     </div>
 </template>
