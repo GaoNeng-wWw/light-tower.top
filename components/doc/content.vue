@@ -1,26 +1,24 @@
 <template>
-    <d-row type="flex" class="docs-devui-row" :gutter="30">
-        <d-col flex="200px" :xs="0" :sm="0" :md="1" class="side">
+    <div class="flex w-full">
+        <div class="basis-[200px] flex-shrink-0 hidden md:block px-[15px]">
             <Side></Side>
-        </d-col>
-        <d-col flex="0 1 auto">
-            <d-content class="content__doc">
-                <nav-menu></nav-menu>
-                <div class="content__doc__docs-wrapper">
-                    <ContentDoc />
-                </div>
-                <h2>本文贡献者</h2>
-                <ul>
-                    <li v-for="author in authors">
-                        <a :href="'mailto:' + author.email">{{ author.name }}</a>
-                    </li>
-                </ul>
-            </d-content>
-        </d-col>
-        <d-col flex="1 0 200px" :xs="0" :sm="0" :md="1" class="toc">
+        </div>
+        <div class="flex-auto px-[15px]">
+            <NavMenu></NavMenu>
+            <div class="content__doc__docs-wrapper">
+                <ContentDoc></ContentDoc>
+            </div>
+            <h2>本文贡献者</h2>
+            <ul>
+                <li v-for="author in authors">
+                    <a :href="'mailto:' + author.email">{{ author.name }}</a>
+                </li>
+            </ul>
+        </div>
+        <div class="flex-grow flex-shrink-0 basis-[200px] hidden md:block">
             <d-tree :data="treeData" @node-click="nodeClick"></d-tree>
-        </d-col>
-    </d-row>
+        </div>
+    </div>
 </template>
 
 <script lang="ts" setup>

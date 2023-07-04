@@ -6,10 +6,8 @@
             </Banner>
         </div>
         <div class="w-full py-4 box-border">
-            <div class="w-full flex justify-center">
-                <div class="md:w-full lg:max-w-7xl">
-                    <Content></Content>
-                </div>
+            <div class="md:w-full lg:max-w-7xl mx-auto flex justify-center">
+                <Content></Content>
             </div>
         </div>
     </div>
