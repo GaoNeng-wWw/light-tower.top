@@ -42,7 +42,7 @@ export default defineNuxtConfig({
     prerender:{
       routes: [...usePreRenderRoute()]
     },
-    preset: 'vercel'
+    preset:'vercel'
   },
   plugins: [
     {
@@ -59,12 +59,6 @@ export default defineNuxtConfig({
     base: 'content',
   },
   css: ['vue-devui/style.css', '@devui-design/icons/icomoon/devui-icon.css', '~/assets/styles/common.scss'],
-  postcss: {
-    config: true,
-    plugins:{
-      'cssnano': true
-    }
-  },
   vite:{
     logLevel: 'silent',
     plugins: [viteCompression(), viteImagemin({
