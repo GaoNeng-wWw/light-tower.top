@@ -5,7 +5,14 @@
         </div>
         <div class="flex-auto px-[15px]">
             <NavMenu></NavMenu>
-            <div class="content__doc__docs-wrapper">
+            <div class="
+            prose prose-gray prose-li:list-outside prose-li:list-disc prose-li:marker:hidden
+            prose-img:w-1/2 prose-li:break-all min-w-full
+            prose-h1:mt-4 prose-headings:no-underlinep prose-headings:no-underline
+            prose-a:no-underline prose-ul:pl-8
+            marker:text-gray-800
+            ">
+            <!-- <div class="content__doc__docs-wrapper"> -->
                 <ContentDoc></ContentDoc>
             </div>
             <h2>本文贡献者</h2>
@@ -15,7 +22,7 @@
                 </li>
             </ul>
         </div>
-        <div class="flex-grow flex-shrink-0 basis-[200px] hidden md:block">
+        <div class="flex-grow-0 flex-shrink-0 basis-[200px] hidden md:block">
             <d-tree :data="treeData" @node-click="nodeClick"></d-tree>
         </div>
     </div>

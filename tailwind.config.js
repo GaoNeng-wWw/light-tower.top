@@ -7,6 +7,9 @@ export default {
     "./plugins/**/*.{js,ts}",
     "./nuxt.config.{js,ts}",
   ],
+  plugins: [
+    require('@tailwindcss/typography')
+  ],
   build: {
     postcss: {
       postcssOptions: {
