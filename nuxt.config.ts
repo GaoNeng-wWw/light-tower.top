@@ -42,7 +42,6 @@ export default defineNuxtConfig({
     prerender:{
       routes: [...usePreRenderRoute()]
     },
-    preset:'vercel'
   },
   plugins: [
     {
@@ -88,12 +87,12 @@ export default defineNuxtConfig({
           drop_debugger: true,
         }
       },
-      rollupOptions:{
-        output:{
-          chunkFileNames: 'nuxt/chunk/chunk-[hash].js',
-          assetFileNames: 'nuxt/assets/assert-[hash][extname]'
-        }
-      }
+      // rollupOptions:{
+      //   output:{
+      //     chunkFileNames: 'nuxt/chunk/chunk-[hash].js',
+      //     assetFileNames: 'nuxt/assets/assert-[hash][extname]'
+      //   }
+      // }
     },
   },
   ssr: true,
