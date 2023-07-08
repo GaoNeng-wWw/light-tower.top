@@ -1,7 +1,7 @@
 <template>
-    <h3>灯塔</h3>
-    <p class="description">公益的反霸凌团体</p>
-    <div class="actions">
+    <h3 class="text-5xl text-center mb-2 sm:text-left">灯塔</h3>
+    <p class="text-3xl text-center sm:text-left">公益的反霸凌团体</p>
+    <div class="flex my-4 gap-4 text-center">
         <nuxt-link to="/doc/about">
             <d-button class="btn" variant="solid" shape="round">加入我们</d-button>
         </nuxt-link>
@@ -15,15 +15,8 @@
 .btn {
     height: 32px;
 }
-.description{
-    font-size: 40px;
-    text-align: left;
-    font-weight: bold;
-    color: #213547;
-}
 h3{
     font-size: 38px;
-    text-align: left;
     background-image: linear-gradient(325deg, #f53b2d, #f87027, #f9991c, #f7be00);
     background-clip: text;
     -webkit-background-clip: text;
@@ -34,17 +27,6 @@ h3{
     display: flex;
     justify-content: flex-start;
     gap: 16px;
-}
-h3,.description{
-    text-align: left;
-}
-@media screen and (max-width:853px){
-    h3,.description{
-        text-align: center;
-    }
-    .actions{
-        justify-content: center;
-    }
 }
 
 </style>

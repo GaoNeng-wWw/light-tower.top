@@ -1,26 +1,31 @@
 <template>
-    <d-row type="flex" class="docs-devui-row" :gutter="30">
-        <d-col flex="200px" :xs="0" :sm="0" :md="1" class="side">
+    <div class="flex w-full">
+        <div class="basis-[200px] flex-shrink-0 hidden md:block px-[15px]">
             <Side></Side>
-        </d-col>
-        <d-col flex="0 1 auto">
-            <d-content class="content__doc">
-                <nav-menu></nav-menu>
-                <div class="content__doc__docs-wrapper">
-                    <ContentDoc />
-                </div>
-                <h2>本文贡献者</h2>
-                <ul>
-                    <li v-for="author in authors">
-                        <a :href="'mailto:' + author.email">{{ author.name }}</a>
-                    </li>
-                </ul>
-            </d-content>
-        </d-col>
-        <d-col flex="1 0 200px" :xs="0" :sm="0" :md="1" class="toc">
+        </div>
+        <div class="flex-auto px-[15px]">
+            <NavMenu></NavMenu>
+            <div class="
+            prose prose-gray prose-li:list-outside prose-li:list-disc prose-li:marker:hidden
+            prose-img:w-1/2 prose-li:break-all min-w-full
+            prose-h1:mt-4 prose-headings:no-underlinep prose-headings:no-underline
+            prose-a:no-underline prose-ul:pl-8
+            marker:text-gray-800
+            ">
+            <!-- <div class="content__doc__docs-wrapper"> -->
+                <ContentDoc></ContentDoc>
+            </div>
+            <h2>本文贡献者</h2>
+            <ul>
+                <li v-for="author in authors">
+                    <a :href="'mailto:' + author.email">{{ author.name }}</a>
+                </li>
+            </ul>
+        </div>
+        <div class="flex-grow-0 flex-shrink-0 basis-[200px] hidden md:block">
             <d-tree :data="treeData" @node-click="nodeClick"></d-tree>
-        </d-col>
-    </d-row>
+        </div>
+    </div>
 </template>
 
 <script lang="ts" setup>

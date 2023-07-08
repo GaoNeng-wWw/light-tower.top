@@ -1,11 +1,11 @@
-// import { defineNuxtConfig } from 'nuxt';
 import usePreRenderRoute from './hooks/usePreRenderRoute';
 import viteCompression from 'vite-plugin-compression';
 import viteImagemin from 'vite-plugin-imagemin';
 
 // https://v3.nuxtjs.org/api/configuration/nuxt.config
 export default defineNuxtConfig({
-  modules: ['@nuxt/content', '~/modules/sitemap'],
+  modules: ['@nuxt/content','~/modules/sitemap','@nuxtjs/tailwindcss'],
+  // // @ts-ignore
   sitemap:{
     hostname: 'https://www.light-tower.top',
   },
@@ -41,7 +41,6 @@ export default defineNuxtConfig({
     prerender:{
       routes: [...usePreRenderRoute()]
     },
-    preset: 'vercel'
   },
   plugins: [
     {
@@ -54,17 +53,17 @@ export default defineNuxtConfig({
         ws: {
             hostname: 'localhost'
         }
-    }
+    },
+    base: 'content',
   },
-  css: ['vue-devui/style.css', '@devui-design/icons/icomoon/devui-icon.css', '~/assets/styles/common.scss'],
-  postcss: {
-    config: true,
-    plugins:{
-      'cssnano': true
-    }
-  },
+  css: [
+    'vue-devui/style.css',
+    '@devui-design/icons/icomoon/devui-icon.css',
+    '~/assets/styles/common.scss',
+  ],
   vite:{
-    plugins: [viteCompression(), viteImagemin({
+    logLevel: 'silent',
+    plugins: [viteImagemin({
       gifsicle: {
         optimizationLevel: 7,
         interlaced: true,
@@ -91,26 +90,7 @@ export default defineNuxtConfig({
           drop_debugger: true,
         }
       },
-      // rollupOptions: {
-      //   output: {
-      //     assetFileNames: assetInfo => {
-      //       var info = assetInfo.name!.split('.')
-      //       var extType = info[info.length - 1]
-      //       if (
-      //         /\.(mp4|webm|ogg|mp3|wav|flac|aac)(\?.*)?$/i.test(assetInfo.name!)
-      //       ) {
-      //         extType = 'media'
-      //       } else if (/\.(png|jpe?g|gif|svg)(\?.*)?$/.test(assetInfo.name!)) {
-      //         extType = 'img'
-      //       } else if (/\.(woff2?|eot|ttf|otf)(\?.*)?$/i.test(assetInfo.name!)) {
-      //         extType = 'fonts'
-      //       }
-      //       return `_nuxt/static/${extType}/[name]-[hash][extname]`
-      //     },
-      //     chunkFileNames: '_nuxt/static/js/[name]-[hash].js',
-      //     entryFileNames: '_nuxt/static/js/[name]-[hash].js'
-      //   }
-      // }
     },
-  }
+  },
+  ssr: true,
 })
