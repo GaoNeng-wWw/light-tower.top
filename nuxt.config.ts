@@ -90,12 +90,6 @@ export default defineNuxtConfig({
           drop_debugger: true,
         }
       },
-      // rollupOptions:{
-      //   output:{
-      //     chunkFileNames: 'nuxt/chunk/chunk-[hash].js',
-      //     assetFileNames: 'nuxt/assets/assert-[hash][extname]'
-      //   }
-      // }
     },
   },
   ssr: true,
