@@ -1,7 +1,7 @@
 <template>
     <div class="flex">
-        <div class="max-w-5xl mx-auto flex justify-center items-center flex-col-reverse text-center sm:flex-row">
-            <div class="flex-grow-0 flex-shrink-0 basis-auto sm:basis-[320px]">
+        <div class="max-w-5xl mx-auto flex justify-center items-center flex-col-reverse text-center sm:flex-row px-8">
+            <div class="flex-grow-0 flex-shrink-1 basis-auto sm:w-full sm:basis-auto">
                 <banner-block></banner-block>
             </div>
             <div class="flex-grow-0 flex-shrink-1">
