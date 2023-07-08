@@ -1,4 +1,4 @@
-import {GlobSync} from 'glob';
+import {globSync} from 'glob';
 function isIndex(path: string){
     return /index/.test(path);
 }
@@ -12,6 +12,6 @@ function normalizationData(paths: string[]){
     })
 }
 export default function usePreRenderRoute(){
-    const res = new GlobSync('content/doc/**/*.md').found
+    const res = globSync('content/doc/**/*.md')
     return normalizationData(res)
 }

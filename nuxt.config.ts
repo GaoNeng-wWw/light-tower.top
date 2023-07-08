@@ -1,12 +1,11 @@
-// import { defineNuxtConfig } from 'nuxt';
 import usePreRenderRoute from './hooks/usePreRenderRoute';
 import viteCompression from 'vite-plugin-compression';
 import viteImagemin from 'vite-plugin-imagemin';
 
 // https://v3.nuxtjs.org/api/configuration/nuxt.config
 export default defineNuxtConfig({
-  modules: ['@nuxt/content','~/modules/sitemap', '@nuxtjs/tailwindcss'],
-  // @ts-ignore
+  modules: ['@nuxt/content','~/modules/sitemap','@nuxtjs/tailwindcss'],
+  // // @ts-ignore
   sitemap:{
     hostname: 'https://www.light-tower.top',
   },
@@ -57,10 +56,14 @@ export default defineNuxtConfig({
     },
     base: 'content',
   },
-  css: ['vue-devui/style.css', '@devui-design/icons/icomoon/devui-icon.css', '~/assets/styles/common.scss'],
+  css: [
+    'vue-devui/style.css',
+    '@devui-design/icons/icomoon/devui-icon.css',
+    '~/assets/styles/common.scss',
+  ],
   vite:{
     logLevel: 'silent',
-    plugins: [viteCompression(), viteImagemin({
+    plugins: [viteImagemin({
       gifsicle: {
         optimizationLevel: 7,
         interlaced: true,
