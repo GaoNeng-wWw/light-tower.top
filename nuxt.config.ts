@@ -41,6 +41,7 @@ export default defineNuxtConfig({
     prerender:{
       routes: [...usePreRenderRoute()]
     },
+    preset: 'vercel'
   },
   plugins: [
     {
