@@ -23,7 +23,7 @@
             </ul>
         </div>
         <div class="flex-grow-0 flex-shrink-0 basis-[200px] hidden md:block">
-            <d-tree :data="treeData" @node-click="nodeClick"></d-tree>
+            <d-tree :data="treeData" @node-click="nodeClick" class="sticky top-4"></d-tree>
         </div>
     </div>
 </template>
