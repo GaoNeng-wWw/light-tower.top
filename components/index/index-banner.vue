@@ -5,7 +5,7 @@
                 <banner-block></banner-block>
             </div>
             <div class="flex-grow-0 flex-shrink-1">
-                <img class="min-w-0 max-h-[320px] sm:min-w-[320px]" src="~/assets/images/Lighthouse-pana.png"/>
+                <img class="w-[320px] h-[320px] min-w-0 max-h-[320px] sm:min-w-[320px]" src="~/assets/images/Lighthouse-pana.png"/>
             </div>
         </div>
     </div>

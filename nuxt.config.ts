@@ -4,7 +4,7 @@ import viteImagemin from 'vite-plugin-imagemin';
 
 // https://v3.nuxtjs.org/api/configuration/nuxt.config
 export default defineNuxtConfig({
-  modules: ['@nuxt/content','~/modules/sitemap','@nuxtjs/tailwindcss'],
+  modules: ['@nuxt/content','~/modules/sitemap','@nuxtjs/tailwindcss','@nuxt/image'],
   // // @ts-ignore
   sitemap:{
     hostname: 'https://www.light-tower.top',
